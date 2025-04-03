@@ -20,7 +20,6 @@ void calculate_and_print(int x, int y, int (*op_func_ptr)(int, int))
 {
 	int	result;
 
-	result = 0;
     result = op_func_ptr(x, y);
 	printf("%i\n", result);
 }
@@ -32,10 +31,10 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 		return (printf("Usage: ./a.out <int> <int>"));
-	num1 = 0;
-	num2 = 0;
+
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
+
     printf("Add:\n");
     calculate_and_print(num1, num2, add);
 

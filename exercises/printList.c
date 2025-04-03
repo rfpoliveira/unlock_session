@@ -3,15 +3,15 @@
 
 typedef struct Node {
     int data;
-    struct Node* next;
+    struct Node *next;
 } Node;
 
-void	free_lst(Node* head)
+void	free_lst(Node *head)
 {
 /*todo*/
 }
 
-void printList(Node* head)
+void printList(Node *head)
 {
 /*todo*/
 }

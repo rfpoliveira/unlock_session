@@ -4,7 +4,7 @@
 
 int common_char_found(char *arg, char *s, int j)
 {
-	int x;
+	size_t x;
 
 	x = j;
 	while (s[x - j])
@@ -40,12 +40,16 @@ int	analize_argument(char *arg, char *s)
 
 int main (int argc, char **argv)
 {
-	int i;
-	int j;
-	char *s;
+	int		i;
+	char	*s;
 
+	//Check if "hello" is in **argv
 	s = "hello";
 	i = 0;
+	
+	if (argc < 2)
+		return (printf("Usage: ./a.out <string> <string> ...\n"));
+
 	while (argv[++i])
 		analize_argument(argv[i], s);
 	return (printf("String not found! :(\n"));
