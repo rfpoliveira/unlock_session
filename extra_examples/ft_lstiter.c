@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+typedef struct s_Node {
     int data;
-    struct Node* next;
-} Node;
+    struct s_Node* next;
+} t_Node;
 
-void	free_lst(Node* head)
+void	free_lst(t_Node* head)
 {
-	Node *temp;
+	t_Node *temp;
 
 	while(head->next)
 	{
@@ -19,9 +19,9 @@ void	free_lst(Node* head)
 	free(head);
 }
 
-void printList(Node* head)
+void printList(t_Node* head)
 {
-	Node *temp;
+	t_Node *temp;
 	
 	temp = head;
 	while(temp)
@@ -36,9 +36,9 @@ void add1(int *data)
 	(*data)++;
 }
 
-void	ft_lstiter(Node *head, void (*f)(int *))
+void	ft_lstiter(t_Node *head, void (*f)(int *))
 {
-	Node *temp;
+	t_Node *temp;
 
 	temp = head;
 	while (temp)
@@ -49,11 +49,11 @@ void	ft_lstiter(Node *head, void (*f)(int *))
 }
 int main(void)
 {
-    Node *head;
+    t_Node *head;
 
-    head = malloc(sizeof(Node));
+    head = malloc(sizeof(t_Node));
     head->data = 10;
-    head->next = malloc(sizeof(Node));
+    head->next = malloc(sizeof(t_Node));
     head->next->data = 20;
     head->next->next = NULL;
 

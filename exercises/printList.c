@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+typedef struct s_Node {
     int data;
-    struct Node *next;
-} Node;
+    struct s_Node *next;
+} t_Node;
 
-void	free_lst(Node *head)
+void	free_lst(t_Node *head)
 {
 /*todo*/
 }
 
-void printList(Node *head)
+void printList(t_Node *head)
 {
 /*todo*/
 }
 
 int main()
 {
-    Node *head;
+    t_Node *head;
 
-    head = malloc(sizeof(Node));
+    head = malloc(sizeof(t_Node));
     head->data = 10;
-    head->next = malloc(sizeof(Node));
+    head->next = malloc(sizeof(t_Node));
     head->next->data = 20;
     head->next->next = NULL;
 
